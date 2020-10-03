@@ -4,12 +4,12 @@ jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
     steps:
-      - name: aprove
-        uses: label-when-approved
+      - name: approve
+        uses: pullreminders/label-when-approved-action@master
         env:
           APPROVALS: 1
-          GITHUB_TOKEN:  x
-          ADD_LABEL: gogogo
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADD_LABEL: "approved"
   
 
 
